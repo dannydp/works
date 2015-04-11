@@ -1,0 +1,32 @@
+<?
+ include_once 'users.php';
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Table with users</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+<div class="container">
+<form method="post">
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" class="form-control"  name="edit-user-name" value=<?=$dataUser['name']?>>
+  </div>
+  <div class="form-group">
+    <label for="second_name">Second Name</label>
+    <input type="text" class="form-control"  name="edit-user-second_name" value=<?=$dataUser['second_name']?>>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control"  name="edit-user-mail" value=<?=$dataUser['e_mail']?>>
+  </div>
+  <a href="index.php"><button type="button" class="btn btn-default" name="back">Back to the table</button></a>
+  <button type="submit" class="btn btn-default" name="edit-user">Edit</button>
+</form>
+</div>
+</body>
+</html>
